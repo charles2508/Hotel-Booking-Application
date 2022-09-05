@@ -1,0 +1,235 @@
+/* Below is the responsive for tablet and Ipad */
+@media screen and (min-width: 768px) {
+    .hotel {
+        margin-top:1.0em;
+        padding-top:1.0em;
+    }
+    #logo {
+        width:148px;
+        height:148px;
+    }
+    footer div {
+        float:left;
+        margin-left:.8em;
+    }
+    #location,#contact {
+        width:50%;
+        float:left;
+        text-align:justify;
+        margin-left:1em;
+    }
+    .menu {
+        margin-right:2em;
+        padding-right:2em;
+    }
+    aside {
+        margin-top:10px;
+    }
+    .Range {
+        margin-top:100px;
+    }
+    #productimg {
+        margin-bottom:5px;
+    }
+    #attributes caption {
+        padding-left:1em;
+    }
+    .room {
+        width:100%;
+    }
+    .roomlist {
+        margin-left:50px;
+        margin-right:50px;
+        margin-right:0px;
+    }
+    .describe {
+        padding-left:0;
+        width:50%;
+    }
+    .Images {
+        float:right;
+        margin-right:0px;
+    }
+    #attributes {
+        margin-left:4em;
+    }
+    #picture, #picture2 {
+        width:180px;
+        height:200px;
+        padding:20px;
+    }
+    #flip_box {
+        margin-top: 1em;
+    }
+
+}
+/* Below is the responsive for mobile phone */
+@media screen and (max-width: 700px) {
+    body {
+        font-size:5pt;
+    }
+    .menu {
+        width:50%;
+        text-align: left;
+        height:120px;
+        height:30px;
+        width:25%;
+        padding:0px;
+    }
+    #current {
+        background-color:transparent;
+        color: white;
+        transition:none;
+    }
+    #hotelname {
+        padding-left:40px;
+        font-size:40px;
+    }
+    #Rooms {
+        padding-left:0em;
+    }
+    #hotel {
+        padding-left:1em;
+        padding-top:3em;
+    }
+    footer {
+        width:100%;
+        margin-left:0em;
+        padding-left:0em;
+    }
+    footer div {
+        width:100%;
+        float:left;
+        font-size:small;
+        text-align:left;
+        display:inline-block;
+        margin-left:0em;
+        padding-left:0em;
+    }
+    #pages {
+        background-color: cornsilk;
+    }
+    #footer div {
+        display:block;
+        width:100%;
+        margin-left:0;
+    }
+    #footer div:first-child {
+        float:none;
+    }
+    #footer div:nth-child(2) {
+        text-align:left;
+    }
+    #footer div:nth-child(3) {
+        text-align:left;
+    }
+    #footer div:last-child {
+        float:none;
+        text-align:left
+    }
+    aside {
+        float:none;
+        width:100%;
+        margin:0em;
+        padding:0em;
+    }
+    .type {
+        font-size:2em;
+        padding-left:0px;
+    }
+    .describe {
+        font-size:20px;
+        padding-left:0px;
+        margin-top:15px;
+        line-height: 50px;
+        width:100%;
+    }
+    .Images {
+        float:none;
+        width: 50%;
+        margin-left:1em;
+    }
+    .image {
+        width:300px;
+        height:250px;
+    }
+    ol {
+        padding-left:0em;
+        font-size:medium;
+    }
+    ol li {
+        margin-left:0em;
+        margin-right:0em;
+    }
+    #url {
+        margin-left:0px;
+    }
+    #optional_features {
+        padding-left:0em;
+        
+    }
+    #feature {
+        padding-left:0em;
+    }
+    #attributes {
+        margin-left:0em;
+        width:320px;
+    }
+    #attributes #thead, #attributes #tbody {
+        margin-left:0px;
+        font-size:small;
+        width:320px;
+    }
+    #attributes caption {
+        padding-left: 0em;
+        margin-left: auto;
+        margin-right: auto;
+        font-size:medium;
+    }
+    /* About.html */
+    #responsive {
+        height:600px;
+    }
+    .detail h2, #mybackground {
+        font-size:medium;
+    }
+    .detail {
+        width:100%;
+        margin-left:0em;
+        font-size: 15px;
+        padding-left:0em;
+    }
+    article dt {
+        width:30%;
+    }
+    article dd {
+        width:50%;
+    }
+    #flip_box {
+        display:inline-block;
+        float:none;
+        clear:both;
+        margin-left:10em;
+        margin-top:4em;
+    }
+    #picture {
+        width:150px;
+        height:150px;
+        padding:10px;
+    }
+
+    #timetable {
+        margin-top:-10em;
+    }
+    #Range {
+        font-size:medium;
+    }
+    /*Enhancement.html */
+    .list {
+        font-size:medium;
+    }
+    /*Enquire*/
+    legend {
+        font-size:medium;
+    }
+}

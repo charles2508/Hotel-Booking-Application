@@ -1,0 +1,565 @@
+/* Author: Vu Thien Tri Phan
+   Purpose: To design my website
+*/
+/* I have downloaded the Lato's font and put it in styles/font directory */
+@font-face {
+    font-family:Lato;
+    src: url("font/Lato-Light.ttf");
+  }
+* {
+      font-family: Lato;
+  }
+  /* Display nothing when the contents overflow to the left or right */
+html, body {
+    overflow-x:hidden;
+}
+/*Index.html*/
+/* Display the background color and the font color of the menu whenever visiting the pages. */
+#current {
+    background-color:moccasin;
+    color: black;
+    transition:2s;
+}
+#navbar li a {
+    text-decoration: none;
+}
+#background {
+    background-image: url("images/background.jpg");
+    background-color: #cccccc;
+    background-repeat:no-repeat;
+    background-size:100vw 100%;;
+    margin:0px;
+}
+
+#background footer{
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+footer {
+    height: 30px;
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-left:70px;
+    font-size:small;
+    margin-left:3em;
+}
+
+footer div {
+    display:inline-block;
+    margin-left:5em;
+    text-align:center;
+}
+/****/
+/* Keep all of the elements except footer stay at top of the page (with 100% height of the screen minus 40px.
+ Thus it makes way for the footer to be located at the bottom of the page. This is applied for all webpages */
+.all_but_footer {
+    min-height: calc(100vh - 40px);
+    margin-bottom:1em;
+}
+#logo {
+    float:left;
+    width:74px;
+    height:74px;
+}
+#navbar {
+    margin-top:0em;
+    margin-bottom:0em;
+}
+nav ul li {
+    display:inline-block;
+    list-style-type:none;
+    font-size:medium;
+}
+.menu {
+    line-height:20px;
+    color:antiquewhite;
+    padding:12px;
+    margin:15px;
+    display:inline-block;
+    border-radius: 15px;
+}
+nav {
+    background-color:black;
+    font-size:large;
+    text-align: center;
+}
+/*Pseudo class, make the background of the text in menu bar change when hovering on it */
+nav a:hover {
+    background-color:lightblue;
+    color:black;
+    transition: 2s;
+}
+#hotel {
+    font: bold 3em Lato,Arial, Helvetica, sans-serif;
+    padding-top:100px;
+    padding-left:70px;
+    margin-top:0px;
+    color:goldenrod;
+    clear:both;
+} 
+
+/* about.html page */
+/*Set the background color for Enquire and About pages */
+#pages {
+    background-color:cornsilk;
+    margin:0px;
+}
+/**Enhancement in css*/
+/*https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_social_media_buttons*/
+/*This is applied to the my image on the about webpage */
+#flip_box {
+    float:right; /*float the figure to the right of the page */
+    background-color: transparent;
+    width:30%;
+    margin:0px;
+}
+#flip_box_inner {
+    position:relative;
+    text-align: center;
+    width:100%;
+    height:100%;
+    transform-style: preserve-3d; /*To specify that the figure and the text inside preserve its 3D position */
+}
+#flip_front {
+    transform: perspective(600px); /*create a 3D Space of 600px between Z plane and the user*/
+    
+}
+#flip_back {
+    transform: perspective(600px); /*create a 3D Space of 600px between Z plane and the user */
+    color:black;
+    transform: rotateY(180deg); /*Rotates the image horizontally (around vertical axis) 180 degress when stop hovering on the backface image  */
+}
+/*The below property makes the figure rotate horizontally when hovering on the image */
+#flip_box_inner:hover #flip_front {
+    transform: perspective(600px) rotateY(-180deg); /*rotate the front image counter-clockwise (from the right to the left)  */
+}
+#flip_box_inner:hover #flip_back {
+    transform: perspective(600px) rotateY(0deg); /* Keep the backface image at a stable position when hovering on it */
+}
+#flip_front, #flip_back {
+    position: absolute;
+    backface-visibility:hidden; /* Make the back face of the figure invisible when facing the user */
+    transition: transform 0.6s linear; /*Rotates the figure within 0.6s*/
+}
+#picture,#picture2{
+    border-width:3px;
+    border-style:double; /*Double border*/
+    padding:20px; /*Set the padding for the image*/
+    width: 250px;
+    height: 250px;
+}
+#heading {
+    font-size:3em;
+    font-weight: bold;
+    color:goldenrod;
+    text-align: center;
+}
+#heading1 {
+    font-size:3em;
+    font-weight: bold;
+    color:goldenrod;
+    text-align: center;
+}
+.detail {
+    color:#D2B48C;
+    font-weight: bolder;
+    width:50%;
+    display:inline-block;
+    margin-left:40px;
+    padding-left:23px;
+}
+.detail h2 {
+    font-size: 3em;
+}
+article dl {
+    color:black;
+}
+dt::after {
+    content: " :"; 
+}
+article dt {
+    float: left;
+    width: 40%;
+    line-height: 25px;
+    font-size: large;
+  }
+article dd {
+    float: left;
+    width: 60%;
+    padding: 0;
+    margin: 0;
+    line-height: 25px;
+    font-size: large;
+  }
+table, td, th {
+    border: 1px solid #D2B48C;
+
+  }
+  /* border-collapse property is used to collapse the whole table into a single border. This is 
+  applied to the timetable in about webpage*/
+table {
+    text-align: center;
+    clear:both;
+    border-collapse: collapse;  
+    margin-top:50px;
+    margin-left:50px;
+    width:65%;
+}
+#query {
+    margin-bottom:50px;
+    padding-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+/* Centre the timetable */
+#timetable {
+    margin-left:auto;
+    margin-right:auto;
+}
+tr,td {
+    text-align: center;
+    height:25px;
+}
+
+.cos10009,.cos10009_last {
+    background-color:#48D1CC;
+}
+.cos10011, .cos10011_last {
+    background-color:#ff7f50;
+}
+.cos10003, .cos10003_last {
+    background-color:#ffb6c1;
+}
+.tne10005, .tne10005_last {
+    background-color: #f5deb3;;
+}
+.time {
+    text-align: center;
+    background-color: #B0E0E6;
+    font-size:larger;
+    font-weight: bolder;
+}
+/* I want to group the table cells in the same field so I hide the bottom border of those cells which 
+are not at the bottom of the group. This is for the table cells in timetable*/
+.cos10003,.cos10009,.cos10011,.tne10005 {
+    border-bottom:hidden;
+}
+caption {
+    font-weight: bold;
+    font-size: 3em;
+    padding: 2px;
+    text-align: center;
+    color:#D2B48C;
+}
+ul li ul li {
+    list-style-type: square;
+    font-size:15pt;
+}
+#ul {
+    font-size:1.5em;
+}
+#ul li {
+    line-height:2em;
+    font-size:15pt;
+}
+#mybackground {
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: center;
+    color:#D2B48C;
+}
+
+/* product.html */
+
+#productimg {
+    background-image: url("images/image.jpg");
+    background-repeat:no-repeat;
+    width:100%;
+    height:700px;
+    background-color: #373B44;
+    background-position: center;
+/*** Enhancement: Create a images that change continously, https://www.youtube.com/watch?v=9U-pv9--Odc */
+/*This is applied to the background image of the product webpage */
+    animation-name: animate;
+    animation-direction: alternate-reverse;
+    animation-fill-mode: forwards;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-timing-function:ease-in-out;
+}
+@keyframes animate {
+    0% {
+        background-image: url("images/image2.jpg");
+        background-position: center;   
+        background-size:cover;
+        height:700px;  
+    } 50% {
+        background-image: url("images/image3.jpg");
+        background-size:cover;
+        height:700px;
+    } 100% {
+        background-image: url("images/image.jpg");
+    }
+}
+
+#hotelname {
+    font: small-caps bold 3em Lato,Arial, Helvetica, sans-serif; /*Short-hand font property for h1 element of product.html page */
+    margin-top:0px;
+    padding-top:4.5em;
+    padding-left:50px;
+    margin-bottom: 3px;
+    color:goldenrod;
+}
+.paradise {
+    font: bold 20px Georgia, serif;
+    font-variant: small-caps;
+    padding-left:50px;
+    margin:0px;
+    color:goldenrod;
+}
+#history {
+    width:50%;
+    text-align: left;
+    font-size:large;
+    padding:30px;
+    line-height:1.5;
+    display:inline-block;
+    margin-left:50px;
+}
+
+
+aside {
+    width:25%;
+    float:right;
+    border: 1px solid grey;
+    border-radius : 14px;
+    background-color: khaki;
+    margin:1em;
+    padding:20px;
+    font-size:medium;
+    margin-top:70px;
+    line-height:1.4;
+    box-shadow:10px 10px 5px #aaaaaa; /*Set the border effect (shadow) for the aside box */
+}
+#Range {
+    width:100%;
+    background-color:cornsilk;
+    margin-top:50px;
+}
+#Rooms {
+    padding-left:150px;
+    padding-top:35px;
+    font-size:30pt;
+    
+}
+.type {
+    font-size:2em;
+    padding-left:30px;
+}
+.Images {
+    float:right;
+    width: 50%;
+    margin-left:50px;
+    margin-top:-10px;
+}
+.image {
+    width:300px;
+    height:250px;
+}
+.describe {
+    font-size:20px;
+    padding-left:100px;
+    margin-top:15px;
+    line-height: 50px;
+    width:50%;
+}
+#url {
+    margin-left:8em;
+    color:black;
+    font-size:large;
+}
+#optional_features {
+    font-size:2.5em;
+    padding-left:150px;
+    margin-top:80px;
+}
+#feature {
+    font-size:large;
+    list-style-type:circle;
+    padding-left:180px;
+    margin-top:20px;
+    line-height:50px;
+}
+/****/
+/* I use some below properties in order to style only the number of the ordered list by using counter
+This is applied to the Room and Suites section in the product webpage*/
+/* Acknowledgement (Reference) of the below code: https://stackoverflow.com/questions/21369843/is-there-a-way-to-make-numbers-in-an-ordered-list-bold */
+/* Set the counter-reset property to create a counter, then I use counter-increment to increase the counter by 1 */
+ol {
+    counter-reset: item;
+  }
+  
+ol > li {
+    list-style-type: none; /*hide the ordered of number in ol element */
+    counter-increment: item; /*Create the new number by using counter, and increment counter by 1 for each list */
+    margin:100px;
+  }
+  
+ol > li:before {
+    width: 1em;
+    font-weight: bold;
+    text-align: right;
+    content: counter(item) "."; /*Create a dot before the content of the list */
+  }
+
+#attributes {
+    text-align: center;
+    font-size:large;
+    border:1px double #D2B48C;
+    margin-bottom:50px;
+}
+#attributes caption {
+    font-size:2.5em;
+    color:black;
+    padding-left:100px;
+    padding-bottom: 50px;
+}
+#attributes #thead {
+    background-color:sandybrown;
+    font-weight: bold;
+}
+#attributes #tbody {
+    background-color:moccasin;
+}
+/* Design for the horizontal break before the footer of each page */
+#break {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    border-style: inset;
+    border-width: 1px;
+}
+/*Designing the footer in order to make it covers the full width of the product.html page */
+#footer {
+    padding-left:0;
+    margin-left:0;
+}
+#footer div {
+    display:inline-block;
+    width:23%;
+    margin-left:0;
+    padding-left:0;
+}
+#footer div:first-child {
+    float:left;
+    text-align: left;
+}
+#footer div:nth-child(2) {
+    text-align:center;
+}
+#footer div:nth-child(3) {
+    text-align:center;
+}
+#footer div:last-child {
+    float:right;
+    text-align: right;
+}
+
+/* enquiry */
+#form {
+    margin:1em;
+    margin-bottom:0em;
+    padding:30px;
+}
+input {
+    border:none;
+    border-bottom: 1px solid black ;
+    background-color:unset;
+}
+form label, .sentence, #confirmation p, #card_type {
+    color:peru;
+    font-size:large;
+}
+p input {
+    font-size:large;
+}
+#RoomSelect {
+    font-weight:bold;
+}
+
+legend{
+    color:peru;
+    font-variant:small-caps;
+    font-weight: bold;
+}
+select {
+    color:saddlebrown;
+    font-size:medium;
+}
+/* Make the textarea to sit under the label (in the form of the enquire webpage) */
+#comment {
+    display:block;
+}
+
+.button {
+    border:1px solid black;
+    padding:5px;
+    font-size:1em;
+    text-align:center;
+    border-radius: 10px;
+    border-color:lightseagreen;
+    margin:20px;
+}
+
+.require {
+    color:#ff7f50;
+    font-size:small;
+}
+
+/* Change the effect of the button when the cursor is moved to there. This is applied to the button of the form */
+.button:hover {
+    background-color:khaki;
+    color:black;
+    transition: 2s;
+}
+
+/*Enhancement page*/
+.list {
+    margin:1em;
+    font-weight:bold;
+    font-size:1.5em;
+}
+#enhancements {
+    margin-bottom:0em;
+}
+.describe-enhancement {
+    line-height:1.5em;
+    font-weight:initial;
+}
+/* payment.html */
+#card_type {
+    padding-top: 20px;
+}
+p span, #card_name, #card_number, #expiry_date, #cvv{
+    color:darkslategray;
+}
+#minutes, #seconds {
+    display: inline-block;
+}
+#confirm_cost {
+    font-weight: bold;
+}
+.error {
+    color:red;
+}
+#total_cost {
+    pointer-events:none;
+    background:rosybrown;
+}
+#submit {
+    float:left;
+}
+
+
